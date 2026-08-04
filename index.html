@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Contacts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header><div><h1>My Contacts</h1><p class="sub" id="count">0 contacts</p></div><button class="add" onclick="openForm()">+ Add Contact</button></header>
+    <input class="search" id="search" oninput="render()" placeholder="Search contacts...">
+    <section class="contacts" id="contacts"></section>
+  </main>
+  <div class="modal" id="modal"><form class="box" onsubmit="saveContact(event)"><h2 id="formTitle">Add Contact</h2><input type="hidden" id="id"><label>Name *</label><input id="name" required placeholder="Full name"><label>Phone</label><input id="phone" placeholder="Phone number"><label>Email</label><input id="email" type="email" placeholder="Email address"><div class="form-actions"><button type="button" class="cancel" onclick="closeForm()">Cancel</button><button type="submit">Save Contact</button></div></form></div>
+  <script src="app.js"></script>
+</body>
+</html>
